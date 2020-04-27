@@ -27,6 +27,7 @@ public class TicketController {
 	{
 		System.out.println(ticket.getId() + " " + ticket.getMovie() + " " + ticket.getScreen() + " " + ticket.getSeat());
         ticketDao.create(ticket);
+        //Success message
         mm.addAttribute("msg", "Ticket booked successfully");
         System.out.println(mm.get("msg"));
 		return "createTicket";
